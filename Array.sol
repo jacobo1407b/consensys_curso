@@ -1,4 +1,4 @@
-pragma solidity ^0.8.3;
+pragma solidity ^0.5.0;
 //los arreglos pueden ser estaticos o dinamicos
 contract Array {
     uint[] public arr;//dinamico

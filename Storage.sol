@@ -1,4 +1,4 @@
-pragma solidity ^0.8.3;
+pragma solidity ^0.5.0;
 
 contract DataLocations{
     uint[] public arr;
@@ -8,7 +8,7 @@ contract DataLocations{
     }
     mapping(uint => MyStruct) myStructs;
 
-    function f() public {
+    function f() public view {
 
         _f(arr, map, myStructs[1]);
         MyStruct storage myStruct = myStructs[1];
@@ -20,15 +20,15 @@ contract DataLocations{
         uint[] storage _arr,
         mapping(uint => address) storage _map,
         MyStruct storage _myStruct
-    ) internal {
+    ) internal pure {
         
     }
 
-    function g(uint[] memory _arr) public returns (uint[] memory) {
+    function g(uint[] memory _arr) public pure returns (uint[] memory) {
 
     }
 
-    function h(uint[] calldata _arr) external {
+    function h(uint[] calldata _arr) pure external {
         
     }
 }

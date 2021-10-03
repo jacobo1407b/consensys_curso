@@ -1,4 +1,6 @@
-pragma solidity ^0.8.3;
+pragma solidity ^0.5.0;
+
+//tipos de variables en solidity
 
 contract Primitives {
     bool public boo = true;

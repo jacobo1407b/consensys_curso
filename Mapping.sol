@@ -1,4 +1,4 @@
-pragma solidity ^0.8.3;
+pragma solidity ^0.5.0;
 //los mapping no son iterables
 contract Mapping {
     mapping(address => uint) public myMap;//retorna uint
@@ -20,7 +20,8 @@ contract Mapping {
 
 contract NestedMapping {
     mapping(address => mapping(uint => bool)) public nested;
-
+    //este esta mas fumado, practicamente acceder a la propiedad de la propiedad
+    /** */
     function get(address _addr1, uint _i) public view returns (bool) {
         return nested[_addr1][_i];
     }
